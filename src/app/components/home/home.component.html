@@ -1,0 +1,15 @@
+<div class="container m-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Pricesearcher test</h1>
+        <p class="lead">Andres Felipe Arias Iza</p>
+        <hr class="my-4">
+        <p>Type a product and get the best price!!!</p>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input #term (keyup)="search(term.value)" type="text" class="form-control" placeholder="search for...">
+        </div>
+    </div>
+    <app-loading *ngIf="loading"></app-loading>
+    <app-cards [items]="products"></app-cards>
+</div>

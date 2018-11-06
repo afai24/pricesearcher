@@ -1,0 +1,12 @@
+<div class="card-columns border-primary m-5">
+    <div (click)="viewProduct(item.product_id)" class="card pointer" *ngFor="let item of items">
+        <img class="card-img-top" [src]="item.image_url" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.product_name }}</h5>
+            <p class="card-text">
+                <span class="badge badge-pill badge-primary">£{{ item.price }}</span>
+                <span class="badge badge-pill badge-light">{{ item.brand }}</span>
+            </p>
+        </div>
+    </div>
+</div>
