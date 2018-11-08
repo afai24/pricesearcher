@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class PricesearcherService {
 
   constructor( private http: HttpClient ) {
-    console.log('price searcher listo');
+    console.log('price searcher service ready');
    }
 
    getQuery( query: string ) {

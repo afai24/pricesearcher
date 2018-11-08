@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <img [src]="item.image_url" class="img-fluid">
+            <img [src]="item.image_url" class="img-fluid" onError="this.onerror=null;this.src='assets/img/noimage.png';">
             <br><br>
             <a [routerLink]="['/home']" class="btn btn-outline-danger btn-block">Home</a>
         </div>
@@ -14,8 +14,10 @@
             <span class="badge badge-pill badge-light">{{ item.brand }}</span>
             <hr>
             <p>{{item.description}}</p>
+            <div class="alert alert-success" *ngIf="priceDrop" role="alert">
+                <i class="fa fa-arrow-down"></i> Price dropped on {{ dateDrop | date }}
+            </div>
         </div>
-
 
     </div>
 </div>

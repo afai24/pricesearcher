@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
 import { PricesearcherService } from 'src/app/services/pricesearcher.service';
 
 @Component({

@@ -1,6 +1,6 @@
 <div class="card-columns border-primary m-5">
     <div (click)="viewProduct(item.product_id)" class="card pointer" *ngFor="let item of items">
-        <img class="card-img-top" [src]="item.image_url" alt="Card image cap">
+        <img class="card-img-top imagenes" [src]="item['image_url']" alt="Card image cap" onError="this.onerror=null;this.src='assets/img/noimage.png';">
         <div class="card-body">
             <h5 class="card-title">{{ item.product_name }}</h5>
             <p class="card-text">
